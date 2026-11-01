@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+/* Material 3 Elevation & Surface Tokens */
+.m3-surface-0 {
+  background-color: var(--color-surface-0, #0e1116);
+}
+
+.m3-surface-1 {
+  background-color: #151a22;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35), 0 1px 2px -1px rgba(0, 0, 0, 0.35);
+}
+
+.m3-surface-2 {
+  background-color: #1a202c;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+}
+
+.m3-surface-3 {
+  background-color: #212836;
+  box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.45), 0 3px 6px -3px rgba(0, 0, 0, 0.45);
+}
+
+/* Light mode overrides for high-contrast accessibility */
+html:not(.dark) .m3-surface-0 {
+  background-color: #f8fafc;
+}
+html:not(.dark) .m3-surface-1 {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.08);
+}
+html:not(.dark) .m3-surface-2 {
+  background-color: #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07);
+}
+html:not(.dark) .m3-surface-3 {
+  background-color: #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1116;
+}
+::-webkit-scrollbar-thumb {
+  background: #272f3d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b465a;
+}
